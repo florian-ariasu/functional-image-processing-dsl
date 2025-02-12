@@ -120,11 +120,13 @@ cd functional-image-dsl
 cd src
 cd 1st-stage
 ghci
+```
+
+#### now, in the GHC Interactive Shell, run these commands:
+```
 :l TestShallow.hs
 main
 ```
-
----
 
 > [!IMPORTANT]
 > Ensure that you have **GHC** (Glasgow Haskell Compiler) installed on your machine.
