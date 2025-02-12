@@ -1,4 +1,3 @@
-
 # 🌌 Functional Images: A Journey Through Dimensional Manipulation
 
 ## 🚀 Overview
@@ -13,7 +12,8 @@ The journey begins with a foundational approach to represent 2D regions and tran
 
 ```haskell
 type Point = (Float, Float)
-type Region = Point -> Bool
+type Pointed a = Point -> a
+type Region = Pointed Bool
 type Transformation = Point -> Point
 ```
 
@@ -27,28 +27,19 @@ type Transformation = Point -> Point
   - Scaling: Changing the size of regions.
   - Composition: Combining multiple transformations into a single operation.
 
-#### Visualization Example
-```haskell
-printPlot 2 2 $ circle 2     
--- Output:
--- ..*..
--- .***.
--- *****
--- .***.
--- ..*..
-```
-
 ### 📗 Stage 2: Deep Embeddings - Region Compositions and Transformations
 In this stage, the project evolves to include more advanced abstractions, specifically using an Abstract Syntax Tree (AST) to represent regions and transformations. This allows for complex compositions and efficient transformation management.
 
 ```haskell
 data RegionAST
-    = FromPoints [Point]       
-    | Rectangle Float Float    
-    | Circle Float            
-    | Complement RegionAST    
-    | Union RegionAST RegionAST  
+    = FromPoints [Point]
+    | Rectangle Float Float
+    | Circle Float
+    | Complement RegionAST
+    | Union RegionAST RegionAST
+    | Intersection RegionAST RegionAST
     | Transform TransformationAST RegionAST
+    deriving (Show, Eq)
 ```
 
 #### Advanced Features
@@ -64,8 +55,13 @@ data RegionAST
 The final stage introduces generic folding mechanisms and type classes, enabling more powerful and reusable operations on regions and transformations. This stage focuses on generalizing region and transformation handling to allow more complex and type-safe operations.
 
 ```haskell
-type TransformationCombiner a = TransformationShape a -> a
-type RegionCombiner a = RegionShape a -> a
+newtype RegionAST
+    = R (RegionShape RegionAST)
+    deriving (Eq)
+
+newtype TransformationAST
+    = T (TransformationShape TransformationAST)
+    deriving (Eq)
 ```
 
 #### Revolutionary Features
@@ -99,55 +95,6 @@ type RegionCombiner a = RegionShape a -> a
 - Provide visualizations for transformation operations.
 - Create tools for learning functional programming and image processing.
 
-## 🛠️ Technical Architecture
-
-### Core Components
-1. **Region System**
-   ```haskell
-   -- Basic region operations
-   complement :: Region -> Region
-   union :: Region -> Region -> Region
-   intersection :: Region -> Region -> Region
-   ```
-
-2. **Transformation Engine**
-   ```haskell
-   -- Advanced transformations
-   translation :: Float -> Float -> Transformation
-   scaling :: Float -> Transformation
-   combineTransformations :: [Transformation] -> Transformation
-   ```
-
-3. **Visualization Pipeline**
-   ```haskell
-   -- Region visualization
-   plot :: Region -> String
-   printPlot :: Float -> Float -> Region -> IO ()
-   ```
-
-## 🎓 Learning Opportunities
-- Advanced functional programming patterns
-- Type-level programming techniques
-- Category theory applications
-- DSL design principles
-- Generic programming concepts
-
-## 🔮 Future Possibilities
-1. **Interactive GUI**
-   - Real-time transformation visualization and manipulation.
-   - Dynamic region creation and editing.
-   - Interactive learning tools for students and developers.
-
-2. **Extended Functionality**
-   - Support for 3D regions and transformations.
-   - Complex pattern recognition algorithms.
-   - Integration with machine learning for image analysis.
-
-3. **Integration Capabilities**
-   - Plugin support for external graphics engines.
-   - Integration with game development frameworks.
-   - Advanced scientific computing and data analysis platforms.
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -160,20 +107,6 @@ type RegionCombiner a = RegionShape a -> a
 git clone https://github.com/yourusername/functional-images
 cd functional-images
 cabal build
-```
-
-### Quick Start
-```haskell
--- Create a basic shape
-let myCircle = circle 5
-
--- Apply transformations
-let transformed = applyTransformation 
-    (combineTransformations [translation 2 3, scaling 1.5]) 
-    myCircle
-
--- Visualize the result
-printPlot 10 10 transformed
 ```
 
 ## 🤝 Contributing
