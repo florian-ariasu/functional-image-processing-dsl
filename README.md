@@ -106,17 +106,17 @@ newtype TransformationAST
 
 ##### If you have SSH keys set up:
 ```bash
-git clone git@github.com:florian-ariasu/functional-image-dsl.git
+git clone git@github.com:florian-ariasu/functional-images-dsl.git
 ```
 
 ##### If you are cloning using HTTPS:
 ```bash
-git clone https://github.com/florian-ariasu/functional-image-dsl.git
+git clone https://github.com/florian-ariasu/functional-images-dsl.git
 ```
 
 ##### then, run the following commands:
 ```bash
-cd functional-image-dsl
+cd functional-images-dsl
 cd src
 cd 1st-stage
 ghci
