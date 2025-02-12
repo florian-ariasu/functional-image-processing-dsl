@@ -114,7 +114,7 @@ git clone git@github.com:florian-ariasu/functional-image-dsl.git
 git clone https://github.com/florian-ariasu/functional-image-dsl.git
 ```
 
-#### Then, run the following commands:
+#### then, run the following commands:
 ```bash
 cd functional-image-dsl
 cd src
@@ -126,7 +126,7 @@ main
 
 ---
 
-> **[!IMPORTANT]**  
+> [!IMPORTANT]
 > Ensure that you have **GHC** (Glasgow Haskell Compiler) installed on your machine.
 
 ## 🤝 Contributing
