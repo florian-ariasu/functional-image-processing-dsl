@@ -129,7 +129,7 @@ main
 ```
 
 > [!IMPORTANT]
-> Ensure that you have **GHC** (Glasgow Haskell Compiler) installed on your machine.
+> Ensure that you have GHC (Glasgow Haskell Compiler) installed on your machine. You can install it directly using your package manager
 
 ## 🤝 Contributing
 Contributions are welcome! Here's how you can help:
