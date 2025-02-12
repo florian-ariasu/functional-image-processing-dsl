@@ -103,11 +103,31 @@ newtype TransformationAST
 - Familiarity with geometric concepts
 
 ### Installation
+
+#### If you have SSH keys set up:
 ```bash
-git clone https://github.com/yourusername/functional-images
-cd functional-images
-cabal build
+git clone git@github.com:florian-ariasu/functional-image-dsl.git
 ```
+
+#### If you are cloning using HTTPS:
+```bash
+git clone https://github.com/florian-ariasu/functional-image-dsl.git
+```
+
+#### Then, run the following commands:
+```bash
+cd functional-image-dsl
+cd src
+cd 1st-stage
+ghci
+:l TestShallow.hs
+main
+```
+
+---
+
+> **[!IMPORTANT]**  
+> Ensure that you have **GHC** (Glasgow Haskell Compiler) installed on your machine.
 
 ## 🤝 Contributing
 Contributions are welcome! Here's how you can help:
