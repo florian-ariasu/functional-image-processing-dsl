@@ -137,3 +137,6 @@ Contributions are welcome! Here's how you can help:
 - Documentation improvements
 - Test case additions
 - Bug reports and fixes
+
+### 📜 Licence
+This project is licensed under the MIT Licence. See the [LICENCE](./LICENSE) file for further details.
