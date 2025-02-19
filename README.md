@@ -85,14 +85,14 @@ newtype TransformationAST
 - Procedural generation of environments and levels.
 - Real-time image transformations and rendering.
 
-#### 3. Scientific Visualization
-- Data region mapping for scientific data visualization.
+#### 3. Scientific Visualisation
+- Data region mapping for scientific data visualisation.
 - Transform coordinate systems for different data sets.
-- Visualize patterns and structures in large data sets.
+- Visualise patterns and structures in large data sets.
 
 #### 4. Educational Tools
 - Demonstrate geometric concepts interactively.
-- Provide visualizations for transformation operations.
+- Provide visualisations for transformation operations.
 - Create tools for learning functional programming and image processing.
 
 ### 🚀 Getting Started
