@@ -1,4 +1,4 @@
-## 🌌 Functional Images: A Journey Through Dimensional Manipulation
+## Functional Images: A Journey Through Dimensional Manipulation
 
 ### 🚀 Overview
 Welcome to a cutting-edge Haskell project that explores the potential of functional programming in the realm of image processing. This project evolves through three distinct stages, each adding new complexity and capability to create a versatile system for defining and manipulating 2D image regions using functional programming techniques.
@@ -7,7 +7,7 @@ Welcome to a cutting-edge Haskell project that explores the potential of functio
 
 ### 🌟 Project Evolution
 
-#### 📘 Stage 1: Shallow Embeddings - Basic Region Representation
+#### Stage 1: Shallow Embeddings - Basic Region Representation
 The journey begins with a foundational approach to represent 2D regions and transformations in a purely functional way. This stage introduces the concept of regions as functions, starting with simple geometric shapes and basic transformation operations:
 
 ```haskell
@@ -27,7 +27,7 @@ type Transformation = Point -> Point
   - Scaling: Changing the size of regions.
   - Composition: Combining multiple transformations into a single operation.
 
-#### 📗 Stage 2: Deep Embeddings - Region Compositions and Transformations
+#### Stage 2: Deep Embeddings - Region Compositions and Transformations
 In this stage, the project evolves to include more advanced abstractions, specifically using an Abstract Syntax Tree (AST) to represent regions and transformations. This allows for complex compositions and efficient transformation management.
 
 ```haskell
@@ -51,7 +51,7 @@ data RegionAST
   - Transformations are now abstracted as part of the AST, allowing for better composition and optimization.
   - Operations such as scaling, rotation, and translation are more easily composed into a unified transformation structure.
 
-#### 📕 Stage 3: Advanced Folding - Generic Region Manipulation
+#### Stage 3: Advanced Folding - Generic Region Manipulation
 The final stage introduces generic folding mechanisms and type classes, enabling more powerful and reusable operations on regions and transformations. This stage focuses on generalizing region and transformation handling to allow more complex and type-safe operations.
 
 ```haskell
