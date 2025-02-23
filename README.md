@@ -1,11 +1,12 @@
 ## Functional Images: A Journey Through Dimensional Manipulation
 
-### 🚀 Overview
+### Overview
+
 Welcome to a cutting-edge Haskell project that explores the potential of functional programming in the realm of image processing. This project evolves through three distinct stages, each adding new complexity and capability to create a versatile system for defining and manipulating 2D image regions using functional programming techniques.
 
 > *"In the world of functional programming, every image is a function waiting to be transformed and rendered."*
 
-### 🌟 Project Evolution
+### Project Evolution
 
 #### Stage 1: Shallow Embeddings - Basic Region Representation
 The journey begins with a foundational approach to represent 2D regions and transformations in a purely functional way. This stage introduces the concept of regions as functions, starting with simple geometric shapes and basic transformation operations:
@@ -73,7 +74,7 @@ newtype TransformationAST
   - Strong type-checking ensures safety across complex transformations and region operations.
   - Functor instances and custom type class implementations allow for flexible, reusable abstractions.
 
-### 🎯 Use Cases
+### Use Cases
 
 #### 1. Computer Graphics
 - Generate and manipulate 2D geometric shapes.
@@ -95,15 +96,24 @@ newtype TransformationAST
 - Provide visualisations for transformation operations.
 - Create tools for learning functional programming and image processing.
 
-### 🚀 Getting Started
+### Getting Started
 
 #### Prerequisites
-- GHC (Glasgow Haskell Compiler)
+- GHC (Glasgow Haskell Compiler) >= 9.2.0
 - Basic understanding of functional programming
 - Familiarity with geometric concepts
 
-#### Installation
+> [!IMPORTANT]
+> GHC can be installed using the following package managers:
 
+- Ubuntu/Debian: `apt-get install ghc`
+- Red Hat/Fedora: `dnf install ghc`
+- macOS: `brew install ghc`
+- Windows: `choco install ghc`
+
+> For detailed installation instructions, refer to the [GHC installation guide](https://www.haskell.org/ghc/).
+
+#### Installation
 ##### If you have SSH keys set up:
 ```bash
 git clone git@github.com:florian-ariasu/functional-images-dsl.git
@@ -128,15 +138,14 @@ ghci
 main
 ```
 
-> [!IMPORTANT]
-> Ensure that you have GHC (Glasgow Haskell Compiler) installed on your machine. You can install it directly using your package manager
+### Contributing
 
-### 🤝 Contributing
 Contributions are welcome! Here's how you can help:
 - Feature implementation
 - Documentation improvements
 - Test case additions
 - Bug reports and fixes
 
-### 📜 Licence
+### Licence
+
 This project is licensed under the MIT Licence. See the [LICENCE](./LICENSE) file for further details.
